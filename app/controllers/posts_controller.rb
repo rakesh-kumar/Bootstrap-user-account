@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
 before_filter :authenticate_user!, :except => [:show, :index]
-  
+
   def index
     @posts = Post.all
 
@@ -58,6 +58,7 @@ before_filter :authenticate_user!, :except => [:show, :index]
   # PUT /posts/1
   # PUT /posts/1.json
   def update
+    before_filter :authenticate_user!
     @post = Post.find(params[:id])
 
     respond_to do |format|
