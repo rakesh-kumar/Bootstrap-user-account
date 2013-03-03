@@ -58,7 +58,17 @@
       </div>
     </div>
 
+<<<<<<< HEAD
     <div class="container"><br/>
+=======
+
+
+
+
+
+
+    <div class="container">
+
         <div class="row">
           <div class="span9">
             <%= bootstrap_flash %>
@@ -68,7 +78,7 @@
             <div class="well sidebar-nav">
              <dd> <h3>Sidebar</h3>
               <ul class="nav nav-list">
-                <li class="nav-header">Sidebar</li>
+                <li class="nav-header">Rakesh Kumar</li>
                 <p>
                 <li><%= image_tag("rakesh.jpg", :alt => "rakesh") %></li>
            </p>
@@ -94,4 +104,16 @@
   </body>
 </html>
 
+
+<h4><p>
+<% if user_signed_in? %>
+    Signed in as <font color="blue"><%= current_user.email %>. Not you?
+    <font color="blue"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <font color="blue"><%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+  <% end %>
+      </div>
+      <% flash.each do |name, msg| %>
+        <font color="blue"><%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %></p></h4>
 
