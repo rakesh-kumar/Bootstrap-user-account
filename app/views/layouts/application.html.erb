@@ -47,16 +47,18 @@
           <a class="brand" href="#">Bootstrap</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Google", "/www.google.com"  %></li>
-              <li><%= link_to "Gmail", "/www.gmail.com"  %></li>
-              <li><%= link_to "Youtube", "/www.Youtube.com"  %></li>
+
+              <li><%= link_to "Google", "http://www.google.com/"  %></li>
+              <li><%= link_to "Gmail", "http://www.gmail.com/"  %></li>
+              <li><%= link_to "Youtube", "http://www.Youtube.com/"  %></li>
+
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container"><br/>
         <div class="row">
           <div class="span9">
             <%= bootstrap_flash %>
@@ -64,19 +66,22 @@
           </div>
           <div class="span3">
             <div class="well sidebar-nav">
-              <h3>Sidebar</h3>
+             <dd> <h3>Sidebar</h3>
               <ul class="nav nav-list">
                 <li class="nav-header">Sidebar</li>
-                <li><%= link_to "Link1", "/path1"  %></li>
-                <li><%= link_to "Twitter", "/www.twitter.com"  %></li>
-                <li><%= link_to "Facebook", "/www.facebook.com"  %></li>
+                <p>
+                <li><%= image_tag("rakesh.jpg", :alt => "rakesh") %></li>
+           </p>
+                <li><%= link_to "Wikipedia", "http://www.wikipedia.com"  %></li>
+                <li><%= link_to "Twitter", "http://www.twitter.com"  %></li>
+                <li><%= link_to "facebook","http://www.facebook.com/" %></li></dd>
+
               </ul>
             </div><!--/.well -->
           </div><!--/span-->
         </div><!--/row-->
-
-      <footer>
-        <p>&copy; Company 2013</p>
+<footer>
+        <p>&copy; Rakesh Kumar 2013</p>
       </footer>
 
     </div> <!-- /container -->
@@ -88,3 +93,5 @@
 
   </body>
 </html>
+
+
